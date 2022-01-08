@@ -1,12 +1,12 @@
 import React from 'react'
 import { useSelector, useDispatch } from 'react-redux';
-import {toggle,destroy} from "../redux/dataSlice/todosSlice";
+import {toggle,destroy,selectorFiltered} from "../redux/dataSlice/todosSlice";
 
 export default function ToDoList() {
 
-    const {items,activeFilter} = useSelector(state => state.todos);
+    //useSelector ile state altındaki herhangi bir elemanı seçebiliriz.
 
-    let filtered=items;
+    const filteredItems= useSelector(selectorFiltered);
 
     const dispatch=useDispatch();
 
@@ -17,16 +17,12 @@ export default function ToDoList() {
         
     }
 
-    if(activeFilter!=='all'){
-        filtered=items.filter((item)=>activeFilter==='active'? item.completed===false && item:item.completed===true && item)
-    }
-  
     return (
         <div>
             <ul className="todo-list">
               
                 {
-                    filtered.map((item,index) =>
+                    filteredItems.map((item,index) =>
                         <li key={item.id} className={item.completed?'completed':''}>
                             <div className="view">
                                 <input 

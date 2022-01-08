@@ -8,12 +8,12 @@ export default function Form() {
     const dispatch=useDispatch();
 
     const handlerSubmit=(e)=>{
+        if(!title){
+            return;
+        }
         e.preventDefault();
-        dispatch(addToDo( {
-            id:nanoid(),
-            title:title,
-            completed:false
-        }))
+        dispatch(addToDo( {title }))
+        setTitle('');
     }
     return (
         <div>
@@ -22,7 +22,9 @@ export default function Form() {
              name="title" 
              placeholder="What needs to be done?"
              autofocus 
-             onChange={(e)=>setTitle(e.target.value)}/>
+             onChange={(e)=>setTitle(e.target.value)}
+             value={title}
+             />
 		</form>
         </div>
     )
