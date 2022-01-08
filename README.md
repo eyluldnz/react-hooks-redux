@@ -15,3 +15,5 @@
 ```
 $ git clone https://github.com/eyluldnz/writingchallange
 ```
+### App Preview
+![image](https://user-images.githubusercontent.com/52054538/148654021-cbfe19e0-b007-4725-ba95-9b595ad8d7b6.png)
