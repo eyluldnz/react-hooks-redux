@@ -1,7 +1,7 @@
 
 # ToDos App 
 
-### It is a study to improve myself on function component and redux on React. I am preparing this work by following the training videos in the frontend development module on [https://app.atika.dev]
+### It is a study to improve myself on function component and redux on React. I am preparing this work by following the training videos in the frontend development module on [https://app.patika.dev]
 
 ## To Do:
 
